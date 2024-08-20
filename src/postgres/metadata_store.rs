@@ -428,7 +428,7 @@ impl MetaDataStorage for PostgresMetadataStore {
                         + &*table
                         + " \
                         WHERE \
-                              next_tick > 0\
+                              next_tick > 0 \
                           AND next_tick > $2 \
                         ORDER BY next_tick ASC \
                         LIMIT 1";
